@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+
+    body{
+        font-family: monospace;
+    }
+    nav{
+        position: fixed;
+        background-color: rgb(0, 0, 0);
+        height: 80px;
+        width: 100%;
+    }
+
+    label.logo{
+        color: white;
+        font-size: 30px;
+        line-height: 80px;
+        padding: 0 70px;
+        font-weight: bold;
+    }
+
+    nav ul{
+        float: right;
+        margin-right: 20px;
+        
+    }
+    nav ul li {
+        display:inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+    }
+
+    nav ul li a{
+        color: white;
+        font-size: 17px;
+        text-transform: uppercase;
+        padding: 7px 13px;
+        border-radius:3px ;
+
+    }
+    a.active, a:hover{
+        background-color: #1b9bff;
+        transition: .5s;
+
+    }
+
+    .checkBtn{
+        font-size: 30px;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        float: right;
+        display: none;
+    }
+
+    #check{
+        display: none;
+    }
+
+    @media (max-width: 952px) {
+        label.logo{
+            font-size: 25px;
+            padding-left: 50px;
+
+        }
+        nav ul li a{
+           font-size: 16px; 
+        }
+    }
+
+    @media(max-width: 909px){
+        .checkBtn{
+            display:block;
+      }
+      ul{
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background: #2c3e50;
+          top: 80px;
+          left: -100%;
+          transition: all .5s; 
+          text-align: center;
+      }
+
+      nav ul li {
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+        }
+      a:hover, a.active{
+          background: none;
+          color : red;
+      } 
+      #check:checked ~ ul{
+          left:0;
+         } 
+    }
+
+
+</style>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="24" height="24"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M14.33333,35.83333v14.33333h143.33333v-14.33333zM14.33333,78.83333v14.33333h143.33333v-14.33333zM14.33333,121.83333v14.33333h143.33333v-14.33333z"></path></g></g></svg>
+        </label>
+        <label for="" class="logo">Infinity Scroll</label>
+
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>This is the example of infinity Scroll</h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

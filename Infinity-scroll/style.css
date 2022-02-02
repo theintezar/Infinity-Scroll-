@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+html{
+    font-size: 62.5%
+}
+
+body{
+    background-color: rgb(4, 33, 73);
+}
+
+.container{
+   min-width: 20rem;
+    width: 70vw;
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.container h1{
+    font-size: 3rem;
+    margin-top: 100px;
+}
+
+.container .posts{
+    margin-top: 50px;
+    background-color: black;
+    padding: 2rem 5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2rem 2rem -1.7rem  rgba(252, 249, 248, 0.377);
+}
+
+.post-id{
+    width: 5rem;
+    height: 5rem;
+    background-color: salmon;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+.title{
+    font-size: 2.5rem;
+    margin: 2rem 0 1rem 0;
+    text-transform: uppercase;
+}
+
+.post-info{
+    font-size: 1.7rem;
+}
